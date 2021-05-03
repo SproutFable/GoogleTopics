@@ -8,9 +8,10 @@ import com.ehsankolivand.sharedatabetweenfragments.databinding.ActivityMainBindi
 
 class MainActivity : AppCompatActivity() {
     lateinit var mainBinding: ActivityMainBinding
-    lateinit var fragmentOne:FragmentOne
+ /*   lateinit var fragmentOne:FragmentOne
     lateinit var fragmentTwo: FragmentTwo
-
+*/
+    lateinit var parentFragment: ParentFragment
 
     private val viewModel:ShareDataViewModel by viewModels()
 
@@ -20,6 +21,9 @@ class MainActivity : AppCompatActivity() {
         val view = mainBinding.root
         setContentView(view)
 
+    /*
+       // Share data between fragments
+
         fragmentOne = FragmentOne.newInstance()
         fragmentTwo = FragmentTwo.newInstance()
         supportFragmentManager.commit {
@@ -27,6 +31,18 @@ class MainActivity : AppCompatActivity() {
             add(R.id.fragment_container,fragmentTwo)
             addToBackStack("")
         }
+*/
+
+        //Share data between a parent and child fragment
+
+        parentFragment = ParentFragment.newInstance()
+        supportFragmentManager.commit {
+            add(R.id.fragment_container,parentFragment)
+            //setPrimaryNavigationFragment(parentFragment)
+            addToBackStack("")
+
+        }
+
 
 
     }
