@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import com.ehsankolivand.sharedatabetweenfragments.databinding.FragmentOneBinding
 
 
@@ -13,6 +14,8 @@ class FragmentOne : Fragment() {
     private var _binding:FragmentOneBinding?=null
     private val binding get() = _binding!!
 
+
+    private val viewModel:ShareDataViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
