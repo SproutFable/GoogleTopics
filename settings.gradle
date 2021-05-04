@@ -1,3 +1,4 @@
+include ':fragmentresultapi'
 include ':sharedatabetweenfragments'
 include ':app'
 rootProject.name = "GoogleTopics"
