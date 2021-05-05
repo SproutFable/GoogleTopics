@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="First Item"
+        android:id="@+id/menu_first"
+        android:icon="@android:drawable/ic_dialog_alert"/>
+    <item android:title="Second Item"
+        android:id="@+id/menu_second"
+        android:icon="@android:drawable/btn_star"/>
+</menu>
