@@ -13,14 +13,10 @@
         android:background="#DAB6B6"
         android:hint="@string/insert_a_text"
         />
+
     <Button
-        android:id="@+id/btn_change_state_true"
+        android:id="@+id/btn_enter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/state_true" />
-    <Button
-        android:id="@+id/btn_change_state_false"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/state_false" />
+        android:text="@string/entervalue" />
 </LinearLayout>
