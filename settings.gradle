@@ -4,3 +4,4 @@ include ':app'
 rootProject.name = "GoogleTopics"
 include ':workingwiththeappbar'
 include ':displayingdialogswithdialogfragment'
+include ':recentsscreen'
