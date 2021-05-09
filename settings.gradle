@@ -5,3 +5,5 @@ rootProject.name = "GoogleTopics"
 include ':workingwiththeappbar'
 include ':displayingdialogswithdialogfragment'
 include ':recentsscreen'
+include ':androidappshortcuts'
+include ':appwidgetsample'

@@ -11,7 +11,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/androidappshortcuts" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/appwidgetsample" />
             <option value="$PROJECT_DIR$/displayingdialogswithdialogfragment" />
             <option value="$PROJECT_DIR$/fragmentresultapi" />
             <option value="$PROJECT_DIR$/recentsscreen" />
