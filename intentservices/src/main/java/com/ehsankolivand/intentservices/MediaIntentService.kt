@@ -7,23 +7,22 @@ import android.provider.Settings
 import android.util.Log
 import java.lang.Exception
 
-class MediaIntentService private constructor(name: String?): IntentService(name) {
+class MediaIntentService : IntentService("mediaPlayer") {
+
 
     private lateinit var media:MediaPlayer
+    init {
+        INSTANCE = this
+    }
     companion object{
-        var INSTANCE:MediaIntentService?=null
+        private lateinit var INSTANCE:MediaIntentService
         var isRunning = false
 
-        fun newInstance() = synchronized(this){
-            if (INSTANCE==null)
-                INSTANCE = MediaIntentService("mediaPlayer")
-            INSTANCE
-        }
         fun stop()
         {
             if (isRunning){
-                INSTANCE?.stopSelf()
                 isRunning=false
+                INSTANCE.stopSelf()
             }
 
 
@@ -31,18 +30,24 @@ class MediaIntentService private constructor(name: String?): IntentService(name)
     }
 
     override fun onHandleIntent(intent: Intent?) {
+
+
+    }
+
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         isRunning = true
         media = MediaPlayer.create(this,Settings.System.DEFAULT_ALARM_ALERT_URI)
         media.start()
-
+        return START_STICKY
     }
+
 
     override fun stopService(name: Intent?): Boolean {
-        if (isRunning)
-        {
             media.stop()
-        }
+
         return super.stopService(name)
     }
+
+
 
 }
