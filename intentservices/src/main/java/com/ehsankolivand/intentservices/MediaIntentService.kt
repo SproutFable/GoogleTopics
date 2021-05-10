@@ -43,6 +43,7 @@ class MediaIntentService : IntentService("mediaPlayer") {
 
 
     override fun stopService(name: Intent?): Boolean {
+
             media.stop()
 
         return super.stopService(name)
