@@ -1,4 +1,4 @@
-package com.ehsankolivand.myintentservices
+package com.ehsankolivand.intentservices
 
 import org.junit.Test
 
