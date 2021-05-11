@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BoundService</string>
+    <string name="get_random_number">Get Random Number</string>
 </resources>
