@@ -8,6 +8,7 @@ import android.os.Bundle
 import com.ehsankolivand.broadcastreceiver.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
     var activityMainBinding: ActivityMainBinding?=null
     private lateinit var myBR: MyBroadCastReceiver
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +16,8 @@ class MainActivity : AppCompatActivity() {
         activityMainBinding = ActivityMainBinding.inflate(layoutInflater)
         val view = activityMainBinding!!.root
         setContentView(view)
+
+
         myBR = MyBroadCastReceiver()
         IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED).also {
             registerReceiver(myBR,it)
