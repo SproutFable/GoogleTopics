@@ -12,6 +12,11 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private var activityMainBinding: ActivityMainBinding?=null
+
+    private lateinit var  myBoundService:MyBoundService
+
+    private var mBound: Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         activityMainBinding = ActivityMainBinding.inflate(layoutInflater)
@@ -19,9 +24,28 @@ class MainActivity : AppCompatActivity() {
             setContentView(this)
         }
 
+
+
     }
 
+    override fun onStart() {
+        super.onStart()
 
+        bindService(Intent(this,MyBoundService::class.java)
+            ,serviceConnection,Context.BIND_AUTO_CREATE)
 
+    }
+    val serviceConnection = object :ServiceConnection{
+        override fun onServiceConnected(name: ComponentName?, service: IBinder?) {
+            val binder = service as MyBoundService.LocalBinder
+            myBoundService = binder.getService()
+            mBound=  true
 
+        }
+
+        override fun onServiceDisconnected(name: ComponentName?) {
+            mBound = false
+        }
+
+    }
 }
