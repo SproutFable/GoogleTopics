@@ -41,6 +41,8 @@ class MessengerService : Service() {
     override fun onBind(intent: Intent): IBinder? {
         Toast.makeText(applicationContext, "binding", Toast.LENGTH_SHORT).show()
         mMessenger = Messenger(IncomingHandler(this))
+
         return mMessenger.binder
     }
+
 }

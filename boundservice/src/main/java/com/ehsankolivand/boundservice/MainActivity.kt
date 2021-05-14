@@ -14,7 +14,6 @@ import java.util.*
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private var activityMainBinding: ActivityMainBinding?=null
 
-
     private lateinit var  myBoundService:MyBoundService
 
     private var mService: Messenger? = null
@@ -61,6 +60,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             myBoundService = binder.getService()
             mBound=  true
 
+
         }
 
         override fun onServiceDisconnected(name: ComponentName?) {
@@ -73,6 +73,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         activityMainBinding = ActivityMainBinding.inflate(layoutInflater)
         activityMainBinding!!.root.apply {
             setContentView(this)
+
+
         }
 
         activityMainBinding!!.button.setOnClickListener(this)
