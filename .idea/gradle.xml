@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/androidappshortcuts" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/appwidgetsample" />
+            <option value="$PROJECT_DIR$/asynctaskandasynctaskloader" />
             <option value="$PROJECT_DIR$/backgroundthreads" />
             <option value="$PROJECT_DIR$/boundservice" />
             <option value="$PROJECT_DIR$/broadcastreceiver" />
@@ -25,6 +26,7 @@
             <option value="$PROJECT_DIR$/services" />
             <option value="$PROJECT_DIR$/sharedatabetweenfragments" />
             <option value="$PROJECT_DIR$/simpleasynctask" />
+            <option value="$PROJECT_DIR$/whowroteit" />
             <option value="$PROJECT_DIR$/workingwiththeappbar" />
           </set>
         </option>
